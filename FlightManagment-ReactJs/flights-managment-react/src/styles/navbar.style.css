@@ -1,0 +1,44 @@
+.Nav-backgroud{
+    margin: 10px;
+    background-color: #00061a;
+    opacity: 0.7;
+    border-color: transparent;
+    border-left: 3px white dotted;
+    border-right: 3px white dotted;
+    border-radius: 40px;
+}
+
+.Nav-font-color{
+    color: #09C6AB;
+    top: 0%;
+}
+
+.Main-logo-words{
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    margin-left: 0.3rem;
+    font-size: 1.3rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.dropdown-menu[aria-labelledby = ddown] {
+    position: absolute;
+    left: 0;
+    top: 2%;
+    z-index: 1000;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 37px 0 0 !important;
+    font-size: 1rem;
+    color: #09C6AB;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+}
