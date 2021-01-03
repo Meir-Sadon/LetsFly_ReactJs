@@ -31,7 +31,6 @@ function CustProfile(props) {
                         cardNumber: props.curCustomer.Credit_Card_Number,
                     }}
                     onSubmit={(values) => {
-                        console.log("Submit Save Changes")
                         let customer = {}
                         customer.Id = props.curCustomer.Id;
                         customer.First_Name = values.firstName;
@@ -42,14 +41,20 @@ function CustProfile(props) {
                         customer.Address = values.country + ":" + values.state + ":" + values.city;
                         customer.Credit_Card_Number = values.cardNumber;
                         console.log(customer)
-                        console.log(props.adminToken) 
-                        axios.put('https://localhost:951/api/administrators/update/customer/'+customer.Id, {
-                            customer: customer,
-                            headers: {
-                                'Access-Control-Allow-Origin': "*",
-                                'Authorization': `Bearer ${props.adminToken}`
+                        console.log(props.adminToken)
+                        axios.put('https://localhost:951/api/administrators/update/customer/' + customer.Id,
+                            customer,
+                            {
+                                headers: {
+                                    //"Accept": "application/json",
+                                    //"Content-type": "application/json",
+                                    //'Access-Control-Allow-Headers': 'Authorization',
+                                    'Access-Control-Allow-Origin': "*",
+                                    'Authorization': `Bearer ${props.adminToken}`
+                                }
                             }
-                        }).then((res) => {
+
+                        ).then((res) => {
                             if (res.data === null) {
                                 swal.fire("Somthing Wrong", `Sorry, We Can't Found Your User.`, 'warning')
                                 return null
