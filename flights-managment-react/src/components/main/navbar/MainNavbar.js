@@ -24,11 +24,10 @@ const onLogOut = (history, setUserType) => {
         cancelButtonText: "No, cancel it!"
     }).then((response) => {
         if (response.isConfirmed) {
+            console.log("Confirm")
             setUserType(userTypes[4])
-            history.push()
+            history.push('/home')
         }
-        else
-            history.push('/Failed')
     });
 }
 const MainNavbar = (props) => {

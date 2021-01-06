@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 
 import './App.css';
+import PageNotFound from './components/main/404';
 import MainNavbar from './containers/mainNavbarContainer';
 import LoginForm from './components/main/LoginForm';
 import CustProfile from './components/customer/CustProfile';
@@ -26,6 +27,7 @@ export const App = (props) => {
       <Router>
           <Route component={MainNavbar} />
           <Switch>
+              {/* <Route path={"/404"} component={} /> */}
               <Route path={["/login-customer", "/login-company"]} component={LoginForm} />
               {/* Customer Pages: */}
               <Route path={["/customer-profile"]} component={CustProfile} />
