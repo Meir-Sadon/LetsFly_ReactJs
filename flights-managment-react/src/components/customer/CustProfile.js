@@ -7,10 +7,6 @@ import swal from 'sweetalert2';
 import './../../styles/custProfile.style.css'
 import PageNotFound from './../main/404';
 
-function saveChanges(values) {
-
-}
-
 function CustProfile(props) {
     if (props.curCustomer === undefined){
         return(
@@ -68,7 +64,7 @@ function CustProfile(props) {
                                     return null
                                 }
                                 else {
-                                    swal.fire(`You .`, 'success')
+                                    swal.fire(``,`Your Details Succesfully Updated!`, 'success')
                                     return res.data
                                 }
                             })

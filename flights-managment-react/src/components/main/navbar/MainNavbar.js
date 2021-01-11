@@ -35,14 +35,14 @@ const MainNavbar = (props) => {
         <div className="Nav-backgroud pb-0.1">
             <Navbar collapseOnSelect expand="lg" className="navbar_inverse">
                 <Navbar.Brand><Link to="/home"><div className="Main-logo-words Nav-font-color">LET'S FLY</div></Link></Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" className="Nav-backgroud" />
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" className="Nav-backgroud" style={{backgroundColor:'blue'}} />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
 
                             <Switch>
                                 <Route path={"/admin"} component={AdminNavbar}></Route>
                                 <Route path={"/compnay"} component={CompanyNavbar}></Route>
-                                <Route path={["/customer-profile"]} render={() => (<CustomerNavbar onClickLogOut={() => {onLogOut(props.history, props.setUserType)}}/>)}></Route>
+                                <Route path={["/customer-profile", "/customer-tickets"]} render={() => (<CustomerNavbar onClickLogOut={() => {onLogOut(props.history, props.setUserType)}}/>)}></Route>
                                 <Route path={"/"} component={AnonymousNavbar}></Route>
                             </Switch>
 

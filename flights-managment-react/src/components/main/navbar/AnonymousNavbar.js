@@ -6,7 +6,7 @@ function AnonymousNavbar() {
 
     return (
         //<div style={{ display: props.userType === userTypes[4] ? 'flex' : 'none' }}>
-        <div style={{ display: 'flex' }}>
+        <div className="Nav-Dropdown-Control">
             <NavDropdown title={<div className="Nav-font-color" style={{ height: '2px' }}>Sing-Up</div>} id="ddown">
                 <Link className="dropdown-item Nav-font-color" to="/page/customerregister">As Customer</Link>
                 <Link className="dropdown-item Nav-font-color" to="/page/companyregister">As Company</Link>

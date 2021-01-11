@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 
@@ -7,6 +7,7 @@ import PageNotFound from './components/main/404';
 import MainNavbar from './containers/mainNavbarContainer';
 import LoginForm from './components/main/LoginForm';
 import CustProfile from './components/customer/CustProfile';
+import CustTickets from './components/customer/CustTickets';
 import {userTypes} from './types/userTypes';
 
 function initBaseAdminToken(props) {
@@ -20,10 +21,13 @@ function initBaseAdminToken(props) {
     })
 }
 
-export const App = (props) => {
-    initBaseAdminToken(props);
-  return (
-  <div className="Login-bg">
+export class App extends React.Component{
+    constructor(props){
+        super(props)
+        initBaseAdminToken(props);
+    }
+  render () {
+  return <div className="Login-bg">
       <Router>
           <Route component={MainNavbar} />
           <Switch>
@@ -31,9 +35,11 @@ export const App = (props) => {
               <Route path={["/login-customer", "/login-company"]} component={LoginForm} />
               {/* Customer Pages: */}
               <Route path={["/customer-profile"]} component={CustProfile} />
+              <Route path={["/customer-tickets"]} component={CustTickets} />
           </Switch>
       </Router>
-  </div>);
+  </div>
+  };
 }
 
 export default App
