@@ -1,0 +1,167 @@
+
+.All-Tickets-Container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-width: 250px;
+    max-height: 850px;
+    margin: 50px 60px;
+    padding: 10px;
+    border: midnightblue  3px solid;
+    border-right: 0px;
+    border-radius: 30px;
+    background-color: lightsteelblue;
+    opacity: 0.8;
+}
+
+.Tickets-Row { 
+     /* margin: 30px 10% 30px 10%; */
+     align-self: center; 
+     text-align-last: center;
+}
+
+.Button-Buy-Ticket {
+    font-weight: bold;
+    color: sandybrown;
+    background-color: darkcyan;
+    border: 3px cornflowerblue solid;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+/* @media screen and (min-width: 801px) {
+    .Tickets-Row {
+        margin: 30px 10% 30px 25%;
+    }
+  }
+*/
+  /* @media screen and (max-width: 575px) {
+    .Container-Single-Ticket {
+        box-sizing: content-box;
+    }
+  } */
+
+/* .Container-Single-Ticket {
+    border: black 2px solid;
+    padding: 5px;
+}
+.Container-Single-Ticket :hover .Single-Ticket {
+    transform: scale(1.05);
+    cursor: pointer;
+    opacity: 1;
+} */
+
+.Single-Ticket{
+    animation: slide-up 0.5s ease;
+    background-image: linear-gradient(gray,lightgrey);
+    color: wheat;
+    opacity: 0.8;
+    margin: 10px 5px;
+    padding: 5px;
+    border: mediumaquamarine 6px solid;
+    border-left: mediumaquamarine 5px solid;
+    border-right: mediumaquamarine 5px solid;
+    border-top: 0px;
+    border-radius: 30px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.534), 0 9px 20px 0 rgba(0, 0, 0, 0.418);
+}
+@keyframes slide-up {
+    0% {
+        transform:  scale(0.9);
+    }
+    100% {
+        transform:  scale(1);
+    }
+}
+
+.Single-Ticket[data-effect]:hover {
+    animation: grow-when-hover 0.5s ease; 
+    box-shadow: 4px 4px 4px 4px black;
+}
+@keyframes grow-when-hover {
+    0% {
+        box-shadow: 0px 0px 0px 0px black;
+    }
+    100% {
+        box-shadow: 4px 4px 4px 4px black;
+    }
+}
+
+.Ticket-Data {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.2px;
+}
+
+.Ticket-Countries-Title {
+    background-color: gray;
+    color: moccasin;
+    width: 90%;
+    font-size: larger;
+    font-weight: bold;
+    border: springgreen 3px solid;
+    border-bottom: 0px;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+}
+.Ticket-Countries-Info {
+    color: black;
+    width: 90%;
+    margin-bottom: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: lightcyan;
+    border: springgreen 3px solid;
+    border-top: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.Ticket-Details-Title {
+    text-align-last: center;
+    color: palegoldenrod;
+    font-weight: bold;
+    width: 90%;
+    background-color: gray;
+    border-left: darkblue 3px solid;    
+    border-right: darkblue 3px solid;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+}
+
+.Ticket-Details-Info {
+    text-align-last: center;
+    color: black;
+    width: 90%;
+    font-size: large;
+    font-weight: bold;
+    background-color: lightcyan;
+    border-left: darkblue 3px solid;
+    border-right: darkblue 3px solid;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+}
+
+.Ticket-FlightId {
+    text-align-last: center;
+    opacity: 0.5;
+    /* : 5px auto; */
+    font-weight: bold;
+}
+
+.Ticket-Countries {
+    background-color: darkcyan;
+    margin-bottom: 30px;
+    border-bottom: navy 5px double;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;   
+     /* border-right: navy 3px solid;
+    border-left: navy 3px solid; */
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+}
+

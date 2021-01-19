@@ -31,20 +31,37 @@ const onLogOut = (history, setUserType) => {
     });
 }
 const MainNavbar = (props) => {
-    return (
+    let matchNavbar;
+    switch(props.userType){
+        case userTypes[1]:
+            matchNavbar = <AdminNavbar></AdminNavbar>
+            break;
+        case userTypes[2]:
+            matchNavbar = <CompanyNavbar></CompanyNavbar>
+            break;
+        case userTypes[3]:
+            matchNavbar = <CustomerNavbar></CustomerNavbar>
+            break;
+        default:
+            matchNavbar = <AnonymousNavbar></AnonymousNavbar>
+            break;
+    }   
+
+        return (
         <div className="Nav-backgroud pb-0.1">
             <Navbar collapseOnSelect expand="lg" className="navbar_inverse">
                 <Navbar.Brand><Link to="/home"><div className="Main-logo-words Nav-font-color">LET'S FLY</div></Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" className="Nav-backgroud" style={{backgroundColor:'blue'}} />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
-
-                            <Switch>
+                        {matchNavbar}
+                        
+                            {/* <Switch>
                                 <Route path={"/admin"} component={AdminNavbar}></Route>
                                 <Route path={"/compnay"} component={CompanyNavbar}></Route>
                                 <Route path={["/customer-profile", "/customer-tickets"]} render={() => (<CustomerNavbar onClickLogOut={() => {onLogOut(props.history, props.setUserType)}}/>)}></Route>
                                 <Route path={"/"} component={AnonymousNavbar}></Route>
-                            </Switch>
+                            </Switch> */}
 
 
 

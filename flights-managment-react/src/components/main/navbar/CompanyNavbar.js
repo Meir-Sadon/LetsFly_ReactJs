@@ -5,7 +5,7 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 function CompanyNavbar(props) {
 
     return (
-        <div style={{ display: 'flex'}}>
+        <div className="Sub-Dropdown-Main">
             <Link className="nav-link nav-link" to="/own-flights"><div className="Nav-font-color">Own Flights</div></Link>
             <Link className="nav-link nav-link" to="/company-inbox"><div className="Nav-font-color">Inbox</div></Link>
             <Link className="nav-link nav-link" to="/search-flights"><div className="Nav-font-color">Search Flights</div></Link>

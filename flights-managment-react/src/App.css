@@ -41,14 +41,14 @@
 
 /* Custom Css */
 .Login-bg {
-  height: 850px;
+  min-height: 850px;
   background: url('./images/loginBackground.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  max-height: 850px;
-  min-width: 700px;
+  /* max-height: 850px;
+  min-width: 700px; */
   display: flex;
   flex-direction: column;
 }

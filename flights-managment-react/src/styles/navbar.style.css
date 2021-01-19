@@ -8,6 +8,16 @@
     border-radius: 40px;
 }
 
+.Sub-Dropdown-Main{
+    display: block;
+}
+
+@media (min-width: 991px){
+    .Sub-Dropdown-Main{
+        display: flex;
+    }
+}
+
 .Nav-font-color{
     color: #09C6AB;
     top: 0%;
@@ -23,12 +33,6 @@
     line-height: inherit;
     white-space: nowrap;
 }
-
-@media (width: 1000px) {
-    .Nav-Dropdown-Control {
-      display: flex;
-    }
-  }
 
 
 

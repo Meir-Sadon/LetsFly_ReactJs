@@ -6,7 +6,7 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 function AdminNavbar() {
     return (
         //<div className="Nav-font-color" style={{ display: props.userType === userTypes[1] ? 'flex' : 'none' }}>
-        <div className="Nav-font-color" style={{ display: 'flex' }}>
+        <div className="Sub-Dropdown-Main">
             <NavDropdown title="Management" id="collasible-nav-dropdown">
                 <Link className="dropdown-item Nav-font-color" to="/edit-companies">Edit Airlines</Link>
                 <Link className="dropdown-item Nav-font-color" to="/edit-customers">Edit Customers</Link>
