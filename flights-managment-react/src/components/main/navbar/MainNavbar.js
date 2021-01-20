@@ -24,7 +24,6 @@ const onLogOut = (history, setUserType) => {
         cancelButtonText: "No, cancel it!"
     }).then((response) => {
         if (response.isConfirmed) {
-            console.log("Confirm")
             setUserType(userTypes[4])
             history.push('/home')
         }
@@ -40,7 +39,7 @@ const MainNavbar = (props) => {
             matchNavbar = <CompanyNavbar></CompanyNavbar>
             break;
         case userTypes[3]:
-            matchNavbar = <CustomerNavbar></CustomerNavbar>
+            matchNavbar = <CustomerNavbar onClickLogOut={() => onLogOut(props.history,props.setUserType)}></CustomerNavbar>
             break;
         default:
             matchNavbar = <AnonymousNavbar></AnonymousNavbar>

@@ -10,7 +10,7 @@ function CustomerNavbar(props) {
             <Link className="nav-link" to="/customer-inbox"><div className="Nav-font-color">Inbox</div></Link>
             <Link className="nav-link" to="/search-flights"><div className="Nav-font-color">Search Flights</div></Link>
             <Link className="nav-link" to="/customer-profile"><div className="Nav-font-color">Profile</div></Link>
-            <Link className="nav-link" to="/customer-profile"><div className="Nav-font-color" onClick={props.onClickLogOut}>Log out</div></Link>
+            <Link className="nav-link" to={props}><div className="Nav-font-color" onClick={props.onClickLogOut}>Log out</div></Link>
         </div>
     );
 }
